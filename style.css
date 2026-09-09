@@ -1,0 +1,548 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0a0f;
+    color: #f0eaff;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(11, 10, 15, 0.95);
+
+    border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    /* Gradient text – Sew Queen style */
+    background: linear-gradient(135deg, #c084fc, #7c3aed, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #b6aad0;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c084fc;
+}
+
+.nav-button {
+    display: flex;
+    gap: 10px; /* Login/Register බොත්තම් අතර පරතරය */
+}
+
+/* Connect WhatsApp බොත්තම (තවමත් තියෙනවා නම්) */
+.connect-btn {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.connect-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+    box-shadow: 0 6px 25px rgba(124, 58, 237, 0.5);
+}
+
+/* අලුතෙන් එකතු කළ Login බොත්තම */
+.login-btn {
+    text-decoration: none;
+    color: #f0eaff;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(124, 58, 237, 0.4);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: rgba(124, 58, 237, 0.2);
+    border-color: rgba(124, 58, 237, 0.6);
+}
+
+/* අලුතෙන් එකතු කළ Register බොත්තම */
+.register-btn {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.register-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+    box-shadow: 0 6px 25px rgba(124, 58, 237, 0.5);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 140px 20px 80px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(124, 58, 237, 0.15),
+            transparent 40%
+        ),
+        #0b0a0f;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border: 1px solid rgba(124, 58, 237, 0.4);
+
+    background: rgba(124, 58, 237, 0.12);
+
+    color: #a78bfa;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 70px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    background: linear-gradient(135deg, #c084fc, #7c3aed, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #b6aad0;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.primary-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+
+    padding: 14px 25px;
+
+    border-radius: 9px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(124, 58, 237, 0.5);
+}
+
+.secondary-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #f0eaff;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(124, 58, 237, 0.2);
+
+    padding: 14px 25px;
+
+    border-radius: 9px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    background: rgba(124, 58, 237, 0.1);
+    border-color: rgba(124, 58, 237, 0.4);
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.section-title p {
+    color: #a78bfa;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+
+    margin-bottom: 14px;
+}
+
+.section-title span {
+    color: #97979f;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features-section {
+    padding: 110px 7%;
+}
+
+.features-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.feature-card {
+    padding: 35px 28px;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    border: 1px solid rgba(124, 58, 237, 0.12);
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(124, 58, 237, 0.4);
+    background: rgba(124, 58, 237, 0.05);
+}
+
+.feature-icon {
+    font-size: 32px;
+
+    margin-bottom: 22px;
+}
+
+.feature-card h3 {
+    font-size: 21px;
+
+    margin-bottom: 13px;
+}
+
+.feature-card p {
+    color: #9999a3;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   COMMANDS
+========================= */
+
+.commands-section {
+    padding: 110px 7%;
+
+    background: #0f0d1a;
+}
+
+.commands-container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.command-card {
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    border: 1px solid rgba(124, 58, 237, 0.12);
+
+    border-radius: 13px;
+
+    transition: 0.3s;
+}
+
+.command-card:hover {
+    border-color: rgba(124, 58, 237, 0.3);
+}
+
+.command-card h3 {
+    color: #a78bfa;
+
+    font-size: 19px;
+
+    margin-bottom: 9px;
+}
+
+.command-card p {
+    color: #9999a3;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    padding: 100px 7%;
+}
+
+.contact-box {
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 70px 30px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(124, 58, 237, 0.12),
+            transparent 60%
+        );
+
+    border: 1px solid rgba(124, 58, 237, 0.15);
+
+    border-radius: 20px;
+}
+
+.contact-box h2 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    color: #9999a3;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    border-top: 1px solid rgba(124, 58, 237, 0.15);
+
+    padding: 50px 20px;
+
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+
+    /* same gradient as logo */
+    background: linear-gradient(135deg, #c084fc, #7c3aed, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.footer-content p {
+    color: #888891;
+
+    margin-bottom: 18px;
+}
+
+.footer-content span {
+    color: #66666f;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .features-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .commands-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box h2 {
+        font-size: 30px;
+    }
+
+}
